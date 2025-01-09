@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Sales.Entities.DomainModels;
 
 namespace Sales.Entities.DbModels;
 
-public class BuyerDbModel
+public class BuyerDbModel: IGetId
 {
     [Key]
     public long Id { get; set; }

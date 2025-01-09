@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Sales.Entities.DomainModels;
 
 namespace Sales.Entities.DbModels;
 
-public class SaleDbModel
+public class SaleDbModel: IGetId
 {
     [Key]
     public long Id { get; set; }

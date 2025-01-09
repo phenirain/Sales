@@ -2,7 +2,7 @@
 
 namespace Sales.Entities.DomainModels;
 
-public class Sale
+public class Sale: IGetId
 {
     public long Id { get; set; }
     public DateOnly Date { get; set; }
