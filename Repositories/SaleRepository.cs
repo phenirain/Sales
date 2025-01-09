@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Sales.Contexts;
 using Sales.Entities.DbModels;
 using Sales.Entities.DomainModels;
+using Sales.Entities.ValueObjects;
 using Sales.Repositories.Abstracts;
 using Sales.Repositories.Interfaces;
 
@@ -18,21 +19,31 @@ public class SaleRepository: AbstractRepository<SaleDbModel, Sale>
 
     public override async Task<IEnumerable<Sale>> GetAll(int limit, int offset)
     {
-        return await Context.Sales
+        var salesDbModels = await Context.Sales
             .Skip(offset)
             .Take(limit)
             .Include(s => s.SaleData)
-            .ProjectTo<Sale>(Mapper.ConfigurationProvider)
             .ToListAsync();
+        var sales = new Sale[limit];
+        for (var i = 0; i < salesDbModels.Count; i++)
+        {
+            sales[i] = Mapper.Map(salesDbModels[i], new Sale());
+            sales[i].AddSaleDataRange(Mapper.Map<List<SaleData>>(salesDbModels[i].SaleData.ToList()));
+        }
+
+        return sales;
     }
 
     public override async Task<Sale?> GetById(long id)
     {
-        return await Context.Sales
+        var saleDbModel = await Context.Sales
             .AsNoTracking()
             .Where(s => s.Id == id)
             .Include(s => s.SaleData)
-            .ProjectTo<Sale>(Mapper.ConfigurationProvider)
             .FirstOrDefaultAsync();
+        if (saleDbModel == null) return null;
+        var sale = Mapper.Map<Sale>(saleDbModel);
+        sale.AddSaleDataRange(Mapper.Map<List<SaleData>>(saleDbModel.SaleData));
+        return sale;
     }
 }
