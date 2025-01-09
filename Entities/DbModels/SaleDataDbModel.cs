@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Sales.Entities.DbModels;
 
 [Owned]
-public class SaleData
+public class SaleDataDbModel
 {
     [Required]
     public long ProductId { get; set; }

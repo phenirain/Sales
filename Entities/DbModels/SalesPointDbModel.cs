@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Sales.Entities.DbModels;
 
-public class SalesPoint
+public class SalesPointDbModel
 {
     [Key]
     public long Id { get; set; }
@@ -11,8 +11,8 @@ public class SalesPoint
     [Required]
     public string Name { get; set; }
     
-    public List<ProvidedProduct> ProvidedProducts { get; set; }
+    public List<ProvidedProductDbModel> ProvidedProducts { get; set; }
     
     // Navigation properties
-    public virtual ICollection<Sale> Sales { get; set; }
+    public virtual ICollection<SaleDbModel> Sales { get; set; }
 }

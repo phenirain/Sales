@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sales.Entities.DbModels;
 
-public class Sale
+public class SaleDbModel
 {
     [Key]
     public long Id { get; set; }
@@ -19,13 +19,13 @@ public class Sale
     
     public long? BuyerId { get; set; }
     
-    public List<SaleData> SalesData { get; set; }
+    public List<SaleDataDbModel> SaleData { get; set; }
 
     [Required]
     [Column(TypeName = "decimal(18,2)")]
     public decimal TotalAmount { get; set; }
     
     // Navigation properties
-    public virtual SalesPoint SalesPoint { get; set; }
-    public virtual Buyer Buyer { get; set; }
+    public virtual SalesPointDbModel SalesPointDbModel { get; set; }
+    public virtual BuyerDbModel BuyerDbModel { get; set; }
 }

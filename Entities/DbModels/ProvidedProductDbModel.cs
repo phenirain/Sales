@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 namespace Sales.Entities.DbModels;
 
 [Owned]
-public class ProvidedProduct
+public class ProvidedProductDbModel
 {
     [Required]
     public long ProductId { get; set; }
     
     [Required]
-    public int Quantity { get; set; }
+    public int ProductQuantity { get; set; }
 }
