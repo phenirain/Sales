@@ -5,5 +5,5 @@ namespace Sales.Services.Interfaces;
 public interface IAuthService
 {
     Task<AuthResponse> Authorize(AuthRequest request);
-    Task<AuthResponse> RefreshToken(string token);
+    AuthResponse RefreshToken(string token);
 }
