@@ -1,0 +1,6 @@
+﻿services:
+  sales:
+    image: sales
+    build:
+      context: .
+      dockerfile: Dockerfile
