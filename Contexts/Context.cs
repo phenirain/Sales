@@ -39,7 +39,7 @@ public class Context: DbContext
                 .HasForeignKey(e => e.SalesPointId);
             
             entity.HasOne(e => e.BuyerDbModel)
-                .WithMany(b => b.SalesIds)
+                .WithMany(b => b.Sales)
                 .HasForeignKey(e => e.BuyerId);
 
             entity.OwnsMany(e => e.SaleData, sd =>

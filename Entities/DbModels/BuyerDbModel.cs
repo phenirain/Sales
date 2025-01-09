@@ -11,5 +11,5 @@ public class BuyerDbModel
     public string Name { get; set; }
 
     // Navigation properties
-    public virtual ICollection<SaleDbModel> SalesIds { get; set; }
+    public virtual ICollection<SaleDbModel> Sales { get; set; }
 }
