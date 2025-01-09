@@ -35,10 +35,11 @@ public abstract class AbstractRepository<DbModel, Model> : IRepository<Model> wh
         return await Context.Set<DbModel>().ProjectTo<Model>(Mapper.ConfigurationProvider).Where(m => m.Id == id).FirstOrDefaultAsync();
     }
 
-    public async Task Add(Model model)
+    public async Task<long> Create(Model model)
     {
         var dbModel = Mapper.Map<DbModel>(model);
         await Context.Set<DbModel>().AddAsync(dbModel);
+        return dbModel.Id;
     }
 
     public async Task Update(Model model)
@@ -46,7 +47,7 @@ public abstract class AbstractRepository<DbModel, Model> : IRepository<Model> wh
         var dbModel = await Context.Set<DbModel>().Where(m => m.Id == model.Id).FirstOrDefaultAsync();
         if (dbModel == null)
         {
-            throw new NotFoundException(typeof(Model).FullName ?? "", model.Id);
+            throw new NotFoundException(typeof(Model), model.Id);
         }
 
         Mapper.Map(model, dbModel);
@@ -58,7 +59,7 @@ public abstract class AbstractRepository<DbModel, Model> : IRepository<Model> wh
         var dbModel = Context.Set<DbModel>().Where(m => m.Id == model.Id).FirstOrDefault();
         if (dbModel == null)
         {
-            throw new NotFoundException(typeof(Model).FullName?? "", model.Id);
+            throw new NotFoundException(typeof(Model), model.Id);
         }
         Context.Set<DbModel>().Remove(dbModel);
     }

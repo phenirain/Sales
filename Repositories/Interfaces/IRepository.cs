@@ -4,7 +4,7 @@ public interface IRepository<Model>
 {
     Task<IEnumerable<Model>> GetAll(int limit, int offset);
     Task<Model?> GetById(long id);
-    Task Add(Model model);
+    Task<long> Create(Model model);
     Task Update(Model model);
     void Delete(Model model);
 }
