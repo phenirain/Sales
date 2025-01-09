@@ -1,9 +1,11 @@
-﻿using Sales.Services.Dtos.ValueObjectDtos;
+﻿using System.ComponentModel.DataAnnotations;
+using Sales.Services.Dtos.ValueObjectDtos;
 
 namespace Sales.Services.Dtos.CreateUpdate;
 
 public class SalesPointBaseDto
 {
+    [Required]
     public string Name { get; set; }
 }
 

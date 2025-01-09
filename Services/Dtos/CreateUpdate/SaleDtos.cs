@@ -1,4 +1,5 @@
-﻿using Sales.Services.Dtos.ValueObjectDtos;
+﻿using System.ComponentModel.DataAnnotations;
+using Sales.Services.Dtos.ValueObjectDtos;
 
 namespace Sales.Services.Dtos.CreateUpdate;
 
@@ -6,7 +7,9 @@ public class SaleBaseDto
 {
     public DateOnly Date { get; set; }
     public TimeOnly Time { get; set; }
+    [Required(ErrorMessage = "Sales point is required")]
     public long SalesPointId { get; set; }
+    [Required(ErrorMessage = "Buyer id is required")]
     public long? BuyerId { get; set; }   
 }
 
