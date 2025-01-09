@@ -1,9 +1,15 @@
-﻿namespace Sales.Entities.DbModels;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Sales.Entities.DbModels;
 
 public class Buyer
 {
+    [Key]
     public long Id { get; set; }
+
+    [Required]
     public string Name { get; set; }
 
-    public List<Sale> SalesIds { get; set; }
+    // Navigation properties
+    public virtual ICollection<Sale> SalesIds { get; set; }
 }
