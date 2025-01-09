@@ -10,6 +10,7 @@ public interface IUnitOfWork
     public IRepository<Sale> SaleRepository { get; }
     public IRepository<SalesPoint> SalesPointRepository { get; }
 
+    IRepository<TModel> GetRepository<TModel>(); 
     Task<int> SaveChangesAsync();
     Task BeginTransactionAsync();
     Task CommitAsync();
