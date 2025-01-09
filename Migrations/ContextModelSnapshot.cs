@@ -22,7 +22,7 @@ namespace Sales.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Sales.Entities.DbModels.Buyer", b =>
+            modelBuilder.Entity("Sales.Entities.DbModels.BuyerDbModel", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace Sales.Migrations
                     b.ToTable("Buyers");
                 });
 
-            modelBuilder.Entity("Sales.Entities.DbModels.Product", b =>
+            modelBuilder.Entity("Sales.Entities.DbModels.ProductDbModel", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -59,7 +59,7 @@ namespace Sales.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Sales.Entities.DbModels.Sale", b =>
+            modelBuilder.Entity("Sales.Entities.DbModels.SaleDbModel", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -91,7 +91,7 @@ namespace Sales.Migrations
                     b.ToTable("Sales");
                 });
 
-            modelBuilder.Entity("Sales.Entities.DbModels.SalesPoint", b =>
+            modelBuilder.Entity("Sales.Entities.DbModels.SalesPointDbModel", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -108,21 +108,21 @@ namespace Sales.Migrations
                     b.ToTable("SalesPoints");
                 });
 
-            modelBuilder.Entity("Sales.Entities.DbModels.Sale", b =>
+            modelBuilder.Entity("Sales.Entities.DbModels.SaleDbModel", b =>
                 {
-                    b.HasOne("Sales.Entities.DbModels.Buyer", "Buyer")
+                    b.HasOne("Sales.Entities.DbModels.BuyerDbModel", "BuyerDbModel")
                         .WithMany("SalesIds")
                         .HasForeignKey("BuyerId");
 
-                    b.HasOne("Sales.Entities.DbModels.SalesPoint", "SalesPoint")
+                    b.HasOne("Sales.Entities.DbModels.SalesPointDbModel", "SalesPointDbModel")
                         .WithMany("Sales")
                         .HasForeignKey("SalesPointId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.OwnsMany("Sales.Entities.DbModels.SaleData", "SalesData", b1 =>
+                    b.OwnsMany("Sales.Entities.DbModels.SaleDataDbModel", "SaleData", b1 =>
                         {
-                            b1.Property<long>("SaleId")
+                            b1.Property<long>("SaleDbModelId")
                                 .HasColumnType("bigint");
 
                             b1.Property<int>("Id")
@@ -140,26 +140,26 @@ namespace Sales.Migrations
                             b1.Property<int>("ProductQuantity")
                                 .HasColumnType("integer");
 
-                            b1.HasKey("SaleId", "Id");
+                            b1.HasKey("SaleDbModelId", "Id");
 
                             b1.ToTable("SalesData");
 
                             b1.WithOwner()
-                                .HasForeignKey("SaleId");
+                                .HasForeignKey("SaleDbModelId");
                         });
 
-                    b.Navigation("Buyer");
+                    b.Navigation("BuyerDbModel");
 
-                    b.Navigation("SalesData");
+                    b.Navigation("SaleData");
 
-                    b.Navigation("SalesPoint");
+                    b.Navigation("SalesPointDbModel");
                 });
 
-            modelBuilder.Entity("Sales.Entities.DbModels.SalesPoint", b =>
+            modelBuilder.Entity("Sales.Entities.DbModels.SalesPointDbModel", b =>
                 {
-                    b.OwnsMany("Sales.Entities.DbModels.ProvidedProduct", "ProvidedProducts", b1 =>
+                    b.OwnsMany("Sales.Entities.DbModels.ProvidedProductDbModel", "ProvidedProducts", b1 =>
                         {
-                            b1.Property<long>("SalesPointId")
+                            b1.Property<long>("SalesPointDbModelId")
                                 .HasColumnType("bigint");
 
                             b1.Property<int>("Id")
@@ -171,26 +171,26 @@ namespace Sales.Migrations
                             b1.Property<long>("ProductId")
                                 .HasColumnType("bigint");
 
-                            b1.Property<int>("Quantity")
+                            b1.Property<int>("ProductQuantity")
                                 .HasColumnType("integer");
 
-                            b1.HasKey("SalesPointId", "Id");
+                            b1.HasKey("SalesPointDbModelId", "Id");
 
                             b1.ToTable("ProvidedProducts");
 
                             b1.WithOwner()
-                                .HasForeignKey("SalesPointId");
+                                .HasForeignKey("SalesPointDbModelId");
                         });
 
                     b.Navigation("ProvidedProducts");
                 });
 
-            modelBuilder.Entity("Sales.Entities.DbModels.Buyer", b =>
+            modelBuilder.Entity("Sales.Entities.DbModels.BuyerDbModel", b =>
                 {
                     b.Navigation("SalesIds");
                 });
 
-            modelBuilder.Entity("Sales.Entities.DbModels.SalesPoint", b =>
+            modelBuilder.Entity("Sales.Entities.DbModels.SalesPointDbModel", b =>
                 {
                     b.Navigation("Sales");
                 });

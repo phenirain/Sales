@@ -56,18 +56,18 @@ namespace Sales.Migrations
                 name: "ProvidedProducts",
                 columns: table => new
                 {
-                    SalesPointId = table.Column<long>(type: "bigint", nullable: false),
+                    SalesPointDbModelId = table.Column<long>(type: "bigint", nullable: false),
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     ProductId = table.Column<long>(type: "bigint", nullable: false),
-                    Quantity = table.Column<int>(type: "integer", nullable: false)
+                    ProductQuantity = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProvidedProducts", x => new { x.SalesPointId, x.Id });
+                    table.PrimaryKey("PK_ProvidedProducts", x => new { x.SalesPointDbModelId, x.Id });
                     table.ForeignKey(
-                        name: "FK_ProvidedProducts_SalesPoints_SalesPointId",
-                        column: x => x.SalesPointId,
+                        name: "FK_ProvidedProducts_SalesPoints_SalesPointDbModelId",
+                        column: x => x.SalesPointDbModelId,
                         principalTable: "SalesPoints",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -105,7 +105,7 @@ namespace Sales.Migrations
                 name: "SalesData",
                 columns: table => new
                 {
-                    SaleId = table.Column<long>(type: "bigint", nullable: false),
+                    SaleDbModelId = table.Column<long>(type: "bigint", nullable: false),
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     ProductId = table.Column<long>(type: "bigint", nullable: false),
@@ -114,10 +114,10 @@ namespace Sales.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SalesData", x => new { x.SaleId, x.Id });
+                    table.PrimaryKey("PK_SalesData", x => new { x.SaleDbModelId, x.Id });
                     table.ForeignKey(
-                        name: "FK_SalesData_Sales_SaleId",
-                        column: x => x.SaleId,
+                        name: "FK_SalesData_Sales_SaleDbModelId",
+                        column: x => x.SaleDbModelId,
                         principalTable: "Sales",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
