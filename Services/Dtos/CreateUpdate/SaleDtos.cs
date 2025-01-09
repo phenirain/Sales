@@ -12,12 +12,12 @@ public class SaleBaseDto
 
 public class SaleCreateDto: SaleBaseDto
 {
-    public List<SaleDataDto> SaleData { get; set; } = new List<SaleDataDto>();
+    public List<SaleDataCreateDto> SaleData { get; set; } = new List<SaleDataCreateDto>();
 }
 
 public class SaleUpdateDto: SaleBaseDto
 {
-    public List<SaleDataDto> AddedSaleData { get; set; }
-    public List<SaleDataDto> UpdatedSaleData { get; set; }
-    public List<SaleDataDto> RemovedSaleData { get; set; }
+    public List<SaleDataCreateDto> AddedSaleData { get; set; }
+    public List<SaleDataCreateDto> UpdatedSaleData { get; set; }
+    public List<SaleDataCreateDto> RemovedSaleData { get; set; }
 }

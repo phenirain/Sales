@@ -28,8 +28,8 @@ public class ServiceMapperProfile: Profile
 
     public void CreateSaleDataMapping()
     {
-        CreateMap<SaleDataDto, SaleData>();
-        CreateMap<SaleData, SaleDataDto>();
+        CreateMap<SaleDataCreateDto, SaleData>();
+        CreateMap<SaleData, SaleDataGetDto>();
     }
 
     public void CreateBuyerMapping()
