@@ -1,8 +1,9 @@
-﻿using Sales.Entities.ValueObjects;
+﻿using Sales.Entities.Interfaces;
+using Sales.Entities.ValueObjects;
 
 namespace Sales.Entities.DomainModels;
 
-public class Sale: IGetId
+public class Sale: IGetId, ISetId
 {
     public long Id { get; set; }
     public DateOnly Date { get; set; }

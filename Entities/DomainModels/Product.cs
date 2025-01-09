@@ -1,6 +1,8 @@
-﻿namespace Sales.Entities.DomainModels;
+﻿using Sales.Entities.Interfaces;
 
-public class Product: IGetId
+namespace Sales.Entities.DomainModels;
+
+public class Product: IGetId, ISetId
 {
     public long Id { get; set; }
     public string Name { get; set; }
