@@ -86,7 +86,7 @@ public class SaleCRUDService: AbstractCRUDService<SaleCreateDto, SaleUpdateDto, 
     {
         var product = await GetProductById(dto.ProductId);
         var saleData = Mapper.Map<SaleData>(dto);
-        saleData.ProductIdAmount = dto.ProductQuantity * product.Price;
+        saleData.SetProductIdAmountByPrice(product.Price);
         return saleData;
     }
 

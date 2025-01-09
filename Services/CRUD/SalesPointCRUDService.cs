@@ -31,9 +31,7 @@ public class SalesPointCRUDService: AbstractCRUDService<SalesPointCreateDto, Sal
                     updatedSalesPoint.ProvidedProducts.Add(Mapper.Map<ProvidedProduct>(ppDto));
                 else
                 {
-                    ppDto.ProductQuantity += oldPp.ProductQuantity;
-                    updatedSalesPoint.ProvidedProducts.Remove(oldPp);
-                    updatedSalesPoint.ProvidedProducts.Add(Mapper.Map<ProvidedProduct>(ppDto));
+                    oldPp.ProductQuantity += ppDto.ProductQuantity;
                 }
             }
         }
@@ -46,9 +44,7 @@ public class SalesPointCRUDService: AbstractCRUDService<SalesPointCreateDto, Sal
                     salesPoint.ProvidedProducts.FirstOrDefault(pp => pp.ProductId == ppDto.ProductId);
                 if (oldPp != null)
                 {
-                    ppDto.ProductQuantity = oldPp.ProductQuantity;
-                    updatedSalesPoint.ProvidedProducts.Remove(oldPp);
-                    updatedSalesPoint.ProvidedProducts.Add(Mapper.Map<ProvidedProduct>(ppDto));
+                    oldPp.ProductQuantity = ppDto.ProductQuantity;
                 }
                 else
                 {

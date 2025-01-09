@@ -5,7 +5,7 @@ namespace Sales.Services.Dtos.BusinessDtos.SaleDtos;
 public class SaleRequest
 {
     [Required(ErrorMessage = "Sales point is required")]
-    public long SalesPoint { get; set; }
+    public long SalesPointId { get; set; }
     [Required(ErrorMessage = "Product id is required")]
     public long ProductId { get; set; }
     [Required(ErrorMessage = "Product quantity is required")]

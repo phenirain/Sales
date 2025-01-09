@@ -6,8 +6,8 @@ namespace Sales.Entities.DomainModels;
 public class Sale: IGetId, ISetId
 {
     public long Id { get; set; }
-    public DateOnly Date { get; set; }
-    public TimeOnly Time { get; set; }
+    public DateOnly Date { get; set; } = DateOnly.FromDateTime(DateTime.Now);
+    public TimeOnly Time { get; set; } = TimeOnly.FromDateTime(DateTime.Now);
     public long SalesPointId { get; set; }
     public long? BuyerId { get; set; }
     private List<SaleData> _saleData { get; } = new List<SaleData>();
