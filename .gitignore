@@ -1,1 +1,4 @@
 .idea/.idea.Sales/.idea
+Sales.Tests/bin/Debug/net8.0
+Sales.Tests/obj
+Sales.Tests/.env
