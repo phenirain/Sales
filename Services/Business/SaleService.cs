@@ -22,7 +22,7 @@ public class SaleService: ISaleService
     }
     
     
-    public async Task<SaleResponse> Sale(SaleRequest request, long? buyerId = null)
+    public async Task<SaleResponse> Sale(SaleRequest request, string? stringBuyerId = null)
     {
         try
         {
@@ -52,6 +52,8 @@ public class SaleService: ISaleService
                 productQuantity: request.ProductQuantity,
                 productPrice: product!.Price
             );
+
+            long? buyerId = long.TryParse(stringBuyerId, out var parsedBuyerId) ? parsedBuyerId : null;
             Sale sale = new Sale
             {
                 SalesPointId = request.SalesPointId,

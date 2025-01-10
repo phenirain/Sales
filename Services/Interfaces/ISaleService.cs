@@ -4,5 +4,5 @@ namespace Sales.Services.Interfaces;
 
 public interface ISaleService
 {
-    Task<SaleResponse> Sale(SaleRequest request, long? buyerId = null);
+    Task<SaleResponse> Sale(SaleRequest request, string? stringBuyerId = null);
 }
