@@ -1,6 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using Sales.Contexts;
+using Sales.Entities.Mapping;
 using Sales.Middlewares;
+using Sales.Repositories;
+using Sales.Repositories.Interfaces;
+using Sales.Services.Business;
+using Sales.Services.CRUD;
+using Sales.Services.Dtos.CreateUpdate;
+using Sales.Services.Dtos.Get;
+using Sales.Services.Interfaces;
+using Sales.Services.Mapping;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,17 +35,43 @@ if (connectionString is null)
     throw new ArgumentNullException("DbConnectionString is not set");
 }
 
+#region dependencies
+
+builder.Services.AddAutoMapper(typeof(EntityMapperProfile), typeof(ServiceMapperProfile));
+
+// infrastructure
 builder.Services.AddDbContext<Context>(options =>
     options.UseNpgsql(connectionString));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+// services
+
+// business
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ISaleService, SaleService>();
+
+// CRUD
+builder.Services.AddScoped<ICRUDService<SaleCreateDto, SaleUpdateDto, SaleGetDto>, SaleCRUDService>();
+builder.Services.AddScoped<ICRUDService<SalesPointCreateDto, SalesPointUpdateDto, SalesPointGetDto>, SalesPointCRUDService>();
+builder.Services.AddScoped<ICRUDService<BuyerDto, BuyerDto, BuyerGetDto>, BuyerCRUDService>();
+builder.Services.AddScoped<ICRUDService<ProductDto, ProductDto, ProductGetDto>, ProductCRUDService>();
+
+// controllers
+builder.Services.AddControllers();
+
+#endregion
+
+
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sales API v1");
+});
 
+app.UsePathBase("/api/v1/");
 app.MapControllers();
 app.UseMiddleware<AuthMiddleware>();
 app.UseMiddleware<ExceptionHandlerMiddleware>();
