@@ -1,0 +1,923 @@
+2025-01-10 16:51:39 [Warning] Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer: The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-10 16:51:39 [Information] Microsoft.Hosting.Lifetime: Now listening on: "https://localhost:7071"
+2025-01-10 16:51:39 [Information] Microsoft.Hosting.Lifetime: Now listening on: "http://localhost:5246"
+2025-01-10 16:51:39 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-01-10 16:51:39 [Information] Microsoft.Hosting.Lifetime: Hosting environment: "Development"
+2025-01-10 16:51:39 [Information] Microsoft.Hosting.Lifetime: Content root path: "C:\Desktop\MyProjects\C#\Sales"
+2025-01-10 16:51:43 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - null null
+2025-01-10 16:51:43 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - 301 0 null 42.4388ms
+2025-01-10 16:51:43 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - null null
+2025-01-10 16:51:43 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 78.2224ms
+2025-01-10 16:51:43 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - null null
+2025-01-10 16:51:43 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - null null
+2025-01-10 16:51:43 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - null null
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - 200 143943 "text/css" 22.8296ms
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - 200 339486 "text/javascript" 23.7722ms
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - 200 1096145 "text/javascript" 37.0017ms
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - null null
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 5.3161ms
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - null null
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - null null
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 5.4413ms
+2025-01-10 16:51:44 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 132.8978ms
+2025-01-10 16:52:18 [Information] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("63"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"__EFMigrationsHistory\" (
+    \"MigrationId\" character varying(150) NOT NULL,
+    \"ProductVersion\" character varying(32) NOT NULL,
+    CONSTRAINT \"PK___EFMigrationsHistory\" PRIMARY KEY (\"MigrationId\")
+);"
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Migrations: Applying migration '"20250109113203_InitialMigration"'.
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"Buyers\" (
+    \"Id\" bigint GENERATED BY DEFAULT AS IDENTITY,
+    \"Name\" text NOT NULL,
+    CONSTRAINT \"PK_Buyers\" PRIMARY KEY (\"Id\")
+);"
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"Products\" (
+    \"Id\" bigint GENERATED BY DEFAULT AS IDENTITY,
+    \"Name\" text NOT NULL,
+    \"Price\" numeric(18,2) NOT NULL,
+    CONSTRAINT \"PK_Products\" PRIMARY KEY (\"Id\")
+);"
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"SalesPoints\" (
+    \"Id\" bigint GENERATED BY DEFAULT AS IDENTITY,
+    \"Name\" text NOT NULL,
+    CONSTRAINT \"PK_SalesPoints\" PRIMARY KEY (\"Id\")
+);"
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"ProvidedProducts\" (
+    \"SalesPointDbModelId\" bigint NOT NULL,
+    \"Id\" integer GENERATED BY DEFAULT AS IDENTITY,
+    \"ProductId\" bigint NOT NULL,
+    \"ProductQuantity\" integer NOT NULL,
+    CONSTRAINT \"PK_ProvidedProducts\" PRIMARY KEY (\"SalesPointDbModelId\", \"Id\"),
+    CONSTRAINT \"FK_ProvidedProducts_SalesPoints_SalesPointDbModelId\" FOREIGN KEY (\"SalesPointDbModelId\") REFERENCES \"SalesPoints\" (\"Id\") ON DELETE CASCADE
+);"
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"Sales\" (
+    \"Id\" bigint GENERATED BY DEFAULT AS IDENTITY,
+    \"Date\" date NOT NULL,
+    \"Time\" time without time zone NOT NULL,
+    \"SalesPointId\" bigint NOT NULL,
+    \"BuyerId\" bigint,
+    \"TotalAmount\" numeric(18,2) NOT NULL,
+    CONSTRAINT \"PK_Sales\" PRIMARY KEY (\"Id\"),
+    CONSTRAINT \"FK_Sales_Buyers_BuyerId\" FOREIGN KEY (\"BuyerId\") REFERENCES \"Buyers\" (\"Id\"),
+    CONSTRAINT \"FK_Sales_SalesPoints_SalesPointId\" FOREIGN KEY (\"SalesPointId\") REFERENCES \"SalesPoints\" (\"Id\") ON DELETE CASCADE
+);"
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"SalesData\" (
+    \"SaleDbModelId\" bigint NOT NULL,
+    \"Id\" integer GENERATED BY DEFAULT AS IDENTITY,
+    \"ProductId\" bigint NOT NULL,
+    \"ProductQuantity\" integer NOT NULL,
+    \"ProductIdAmount\" numeric(18,2) NOT NULL,
+    CONSTRAINT \"PK_SalesData\" PRIMARY KEY (\"SaleDbModelId\", \"Id\"),
+    CONSTRAINT \"FK_SalesData_Sales_SaleDbModelId\" FOREIGN KEY (\"SaleDbModelId\") REFERENCES \"Sales\" (\"Id\") ON DELETE CASCADE
+);"
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX \"IX_Sales_BuyerId\" ON \"Sales\" (\"BuyerId\");"
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX \"IX_Sales_SalesPointId\" ON \"Sales\" (\"SalesPointId\");"
+2025-01-10 16:55:45 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"__EFMigrationsHistory\" (\"MigrationId\", \"ProductVersion\")
+VALUES ('20250109113203_InitialMigration', '8.0.11');"
+2025-01-10 17:02:03 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("78"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 17:02:03 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 17:02:03 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 17:02:03 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 17:02:03 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 17:02:03 [Information] Microsoft.EntityFrameworkCore.Migrations: No migrations were applied. The database is already up to date.
+2025-01-10 17:02:03 [Warning] Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer: The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-10 17:02:03 [Information] Microsoft.Hosting.Lifetime: Now listening on: "https://localhost:7071"
+2025-01-10 17:02:03 [Information] Microsoft.Hosting.Lifetime: Now listening on: "http://localhost:5246"
+2025-01-10 17:02:03 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-01-10 17:02:03 [Information] Microsoft.Hosting.Lifetime: Hosting environment: "Development"
+2025-01-10 17:02:03 [Information] Microsoft.Hosting.Lifetime: Content root path: "C:\Desktop\MyProjects\C#\Sales"
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - null null
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - 301 0 null 40.4267ms
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - null null
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 78.6856ms
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - null null
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - null null
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - null null
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - 200 339486 "text/javascript" 21.9964ms
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - 200 143943 "text/css" 23.7402ms
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - 200 1096145 "text/javascript" 31.9397ms
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - null null
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - null null
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 4.8405ms
+2025-01-10 17:02:07 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 96.2943ms
+2025-01-10 17:02:18 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/crud/buyer""?limit=10&offset=0" - null null
+2025-01-10 17:02:18 [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware: Executing endpoint '"Sales.Controllers.CRUD.BuyerCRUDController.GetAll (Sales)"'
+2025-01-10 17:02:18 [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Route matched with "{action = \"GetAll\", controller = \"BuyerCRUD\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[Sales.Services.Dtos.Get.BuyerGetDto]] GetAll(Int32, Int32)" on controller "Sales.Controllers.CRUD.BuyerCRUDController" ("Sales").
+2025-01-10 17:02:18 [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Executing action method "Sales.Controllers.CRUD.BuyerCRUDController.GetAll (Sales)" - Validation state: Valid
+2025-01-10 17:02:18 [Warning] Microsoft.EntityFrameworkCore.Query: The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-01-10 17:02:18 [Warning] Microsoft.EntityFrameworkCore.Query: The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-01-10 17:02:19 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("21"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT b.\"Id\", b.\"Name\"
+FROM \"Buyers\" AS b
+LIMIT @__p_1 OFFSET @__p_0"
+2025-01-10 17:02:19 [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Executed action method "Sales.Controllers.CRUD.BuyerCRUDController.GetAll (Sales)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 442.2111ms.
+2025-01-10 17:02:19 [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor: Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[Sales.Services.Dtos.Get.BuyerGetDto, Sales, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2025-01-10 17:02:19 [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Executed action "Sales.Controllers.CRUD.BuyerCRUDController.GetAll (Sales)" in 621.5664ms
+2025-01-10 17:02:19 [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware: Executed endpoint '"Sales.Controllers.CRUD.BuyerCRUDController.GetAll (Sales)"'
+2025-01-10 17:02:19 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/crud/buyer""?limit=10&offset=0" - 200 null "application/json; charset=utf-8" 688.4612ms
+2025-01-10 17:02:51 [Information] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-01-10 17:39:17 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("76"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 17:39:17 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 17:39:17 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 17:39:17 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 17:39:17 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 17:39:17 [Information] Microsoft.EntityFrameworkCore.Migrations: No migrations were applied. The database is already up to date.
+2025-01-10 17:39:17 [Warning] Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer: The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-10 17:39:17 [Information] Microsoft.Hosting.Lifetime: Now listening on: "https://localhost:7071"
+2025-01-10 17:39:17 [Information] Microsoft.Hosting.Lifetime: Now listening on: "http://localhost:5246"
+2025-01-10 17:39:17 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-01-10 17:39:17 [Information] Microsoft.Hosting.Lifetime: Hosting environment: "Development"
+2025-01-10 17:39:17 [Information] Microsoft.Hosting.Lifetime: Content root path: "C:\Desktop\MyProjects\C#\Sales"
+2025-01-10 17:39:18 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - null null
+2025-01-10 17:39:18 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - 301 0 null 57.0989ms
+2025-01-10 17:39:18 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - null null
+2025-01-10 17:39:19 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 81.0701ms
+2025-01-10 17:39:19 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - null null
+2025-01-10 17:39:19 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - null null
+2025-01-10 17:39:19 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - null null
+2025-01-10 17:39:19 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2025-01-10 17:39:19 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2025-01-10 17:39:19 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - 200 143943 "text/css" 24.5215ms
+2025-01-10 17:39:19 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - 200 339486 "text/javascript" 26.3989ms
+2025-01-10 17:39:19 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2025-01-10 17:39:19 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - 200 1096145 "text/javascript" 37.4353ms
+2025-01-10 17:39:19 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - null null
+2025-01-10 17:39:19 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 127.9299ms
+2025-01-10 17:39:35 [Information] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-01-10 17:40:21 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("78"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 17:40:21 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 17:40:21 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 17:40:21 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 17:40:21 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 17:40:21 [Information] Microsoft.EntityFrameworkCore.Migrations: No migrations were applied. The database is already up to date.
+2025-01-10 17:40:21 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("14"ms) [Parameters=["@p0='?'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"SalesPoints\" (\"Name\")
+VALUES (@p0)
+RETURNING \"Id\";"
+2025-01-10 17:40:21 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("4"ms) [Parameters=["@p1='?' (DbType = Int64), @p2='?' (DbType = Int64), @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"ProvidedProducts\" (\"SalesPointDbModelId\", \"ProductId\", \"ProductQuantity\")
+VALUES (@p1, @p2, @p3)
+RETURNING \"Id\";"
+2025-01-10 17:40:21 [Warning] Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer: The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-10 17:40:21 [Information] Microsoft.Hosting.Lifetime: Now listening on: "https://localhost:7071"
+2025-01-10 17:40:21 [Information] Microsoft.Hosting.Lifetime: Now listening on: "http://localhost:5246"
+2025-01-10 17:40:21 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-01-10 17:40:21 [Information] Microsoft.Hosting.Lifetime: Hosting environment: "Development"
+2025-01-10 17:40:21 [Information] Microsoft.Hosting.Lifetime: Content root path: "C:\Desktop\MyProjects\C#\Sales"
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - null null
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - 301 0 null 68.5861ms
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - null null
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 83.2348ms
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - null null
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - null null
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - null null
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - 200 143943 "text/css" 31.3936ms
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - 200 339486 "text/javascript" 33.6076ms
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - 200 1096145 "text/javascript" 43.9842ms
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - null null
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2025-01-10 17:40:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 4.8701ms
+2025-01-10 17:40:23 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - null null
+2025-01-10 17:40:23 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 143.4356ms
+2025-01-10 17:41:00 [Information] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-01-10 17:42:38 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("85"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 17:42:38 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 17:42:38 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 17:42:38 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 17:42:38 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 17:42:38 [Information] Microsoft.EntityFrameworkCore.Migrations: No migrations were applied. The database is already up to date.
+2025-01-10 17:42:38 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT t.\"Id\", t.\"Name\", p.\"SalesPointDbModelId\", p.\"Id\", p.\"ProductId\", p.\"ProductQuantity\"
+FROM (
+    SELECT s.\"Id\", s.\"Name\"
+    FROM \"SalesPoints\" AS s
+    WHERE s.\"Name\" = 's'
+    LIMIT 1
+) AS t
+LEFT JOIN \"ProvidedProducts\" AS p ON t.\"Id\" = p.\"SalesPointDbModelId\"
+ORDER BY t.\"Id\", p.\"SalesPointDbModelId\""
+2025-01-10 17:42:39 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("18"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int64), @p3='?' (DbType = Int64), @p2='?'"], CommandType='Text', CommandTimeout='30']"
+""DELETE FROM \"ProvidedProducts\"
+WHERE \"Id\" = @p0 AND \"SalesPointDbModelId\" = @p1;
+UPDATE \"SalesPoints\" SET \"Name\" = @p2
+WHERE \"Id\" = @p3;"
+2025-01-10 17:42:39 [Warning] Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer: The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-10 17:42:39 [Information] Microsoft.Hosting.Lifetime: Now listening on: "https://localhost:7071"
+2025-01-10 17:42:39 [Information] Microsoft.Hosting.Lifetime: Now listening on: "http://localhost:5246"
+2025-01-10 17:42:39 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-01-10 17:42:39 [Information] Microsoft.Hosting.Lifetime: Hosting environment: "Development"
+2025-01-10 17:42:39 [Information] Microsoft.Hosting.Lifetime: Content root path: "C:\Desktop\MyProjects\C#\Sales"
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - null null
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - 301 0 null 49.2855ms
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - null null
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 92.3718ms
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - null null
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - null null
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - null null
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - 200 143943 "text/css" 26.0506ms
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - 200 339486 "text/javascript" 27.81ms
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - 200 1096145 "text/javascript" 37.9545ms
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - null null
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2025-01-10 17:42:39 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 6.3891ms
+2025-01-10 17:42:40 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - null null
+2025-01-10 17:42:40 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 112.2836ms
+2025-01-10 17:42:44 [Information] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-01-10 18:05:56 [Warning] Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer: The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-10 18:05:56 [Information] Microsoft.Hosting.Lifetime: Now listening on: "https://localhost:7071"
+2025-01-10 18:05:56 [Information] Microsoft.Hosting.Lifetime: Now listening on: "http://localhost:5246"
+2025-01-10 18:05:56 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-01-10 18:05:56 [Information] Microsoft.Hosting.Lifetime: Hosting environment: "Development"
+2025-01-10 18:05:56 [Information] Microsoft.Hosting.Lifetime: Content root path: "C:\Desktop\MyProjects\C#\Sales"
+2025-01-10 18:05:56 [Information] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-01-10 18:06:59 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("94"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 18:06:59 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 18:06:59 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 18:06:59 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 18:06:59 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 18:06:59 [Information] Microsoft.EntityFrameworkCore.Migrations: No migrations were applied. The database is already up to date.
+2025-01-10 18:07:00 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Products\" AS p)"
+2025-01-10 18:07:00 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("22"ms) [Parameters=["@p0='?', @p1='?' (DbType = Decimal), @p2='?', @p3='?' (DbType = Decimal), @p4='?', @p5='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Products\" (\"Name\", \"Price\")
+VALUES (@p0, @p1)
+RETURNING \"Id\";
+INSERT INTO \"Products\" (\"Name\", \"Price\")
+VALUES (@p2, @p3)
+RETURNING \"Id\";
+INSERT INTO \"Products\" (\"Name\", \"Price\")
+VALUES (@p4, @p5)
+RETURNING \"Id\";"
+2025-01-10 18:07:00 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"SalesPoints\" AS s)"
+2025-01-10 18:07:00 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=["@p0='?', @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"SalesPoints\" (\"Name\")
+VALUES (@p0)
+RETURNING \"Id\";
+INSERT INTO \"SalesPoints\" (\"Name\")
+VALUES (@p1)
+RETURNING \"Id\";"
+2025-01-10 18:07:00 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("6"ms) [Parameters=["@p2='?' (DbType = Int64), @p3='?' (DbType = Int64), @p4='?' (DbType = Int32), @p5='?' (DbType = Int64), @p6='?' (DbType = Int64), @p7='?' (DbType = Int32), @p8='?' (DbType = Int64), @p9='?' (DbType = Int64), @p10='?' (DbType = Int32), @p11='?' (DbType = Int64), @p12='?' (DbType = Int64), @p13='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"ProvidedProducts\" (\"SalesPointDbModelId\", \"ProductId\", \"ProductQuantity\")
+VALUES (@p2, @p3, @p4)
+RETURNING \"Id\";
+INSERT INTO \"ProvidedProducts\" (\"SalesPointDbModelId\", \"ProductId\", \"ProductQuantity\")
+VALUES (@p5, @p6, @p7)
+RETURNING \"Id\";
+INSERT INTO \"ProvidedProducts\" (\"SalesPointDbModelId\", \"ProductId\", \"ProductQuantity\")
+VALUES (@p8, @p9, @p10)
+RETURNING \"Id\";
+INSERT INTO \"ProvidedProducts\" (\"SalesPointDbModelId\", \"ProductId\", \"ProductQuantity\")
+VALUES (@p11, @p12, @p13)
+RETURNING \"Id\";"
+2025-01-10 18:07:00 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Buyers\" AS b)"
+2025-01-10 18:07:00 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=["@p0='?', @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Buyers\" (\"Name\")
+VALUES (@p0)
+RETURNING \"Id\";
+INSERT INTO \"Buyers\" (\"Name\")
+VALUES (@p1)
+RETURNING \"Id\";"
+2025-01-10 18:07:00 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Sales\" AS s)"
+2025-01-10 18:07:00 [Error] Microsoft.EntityFrameworkCore.Database.Command: Failed executing DbCommand ("17"ms) [Parameters=["@p0='?' (DbType = Int64), @p1='?' (DbType = Date), @p2='?' (DbType = Int64), @p3='?' (DbType = Time), @p4='?' (DbType = Decimal), @p5='?' (DbType = Int64), @p6='?' (DbType = Date), @p7='?' (DbType = Int64), @p8='?' (DbType = Time), @p9='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Sales\" (\"BuyerId\", \"Date\", \"SalesPointId\", \"Time\", \"TotalAmount\")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING \"Id\";
+INSERT INTO \"Sales\" (\"BuyerId\", \"Date\", \"SalesPointId\", \"Time\", \"TotalAmount\")
+VALUES (@p5, @p6, @p7, @p8, @p9)
+RETURNING \"Id\";"
+2025-01-10 18:07:00 [Error] Microsoft.EntityFrameworkCore.Update: An exception occurred in the database while saving changes for context type '"Sales.Contexts.Context"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table \"Sales\" violates foreign key constraint \"FK_Sales_SalesPoints_SalesPointId\"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table \"Sales\" violates foreign key constraint \"FK_Sales_SalesPoints_SalesPointId\"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Sales
+    ConstraintName: FK_Sales_SalesPoints_SalesPointId
+    File: ri_triggers.c
+    Line: 2619
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)"
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Sales" violates foreign key constraint "FK_Sales_SalesPoints_SalesPointId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Sales" violates foreign key constraint "FK_Sales_SalesPoints_SalesPointId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Sales
+    ConstraintName: FK_Sales_SalesPoints_SalesPointId
+    File: ri_triggers.c
+    Line: 2619
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2025-01-10 18:09:20 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("82"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 18:09:20 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 18:09:20 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 18:09:20 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 18:09:20 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 18:09:20 [Information] Microsoft.EntityFrameworkCore.Migrations: No migrations were applied. The database is already up to date.
+2025-01-10 18:09:21 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Products\" AS p)"
+2025-01-10 18:09:21 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"SalesPoints\" AS s)"
+2025-01-10 18:09:21 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Buyers\" AS b)"
+2025-01-10 18:09:21 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Sales\" AS s)"
+2025-01-10 18:09:21 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("17"ms) [Parameters=["@p0='?' (DbType = Int64), @p1='?' (DbType = Date), @p2='?' (DbType = Int64), @p3='?' (DbType = Time), @p4='?' (DbType = Decimal), @p5='?' (DbType = Int64), @p6='?' (DbType = Date), @p7='?' (DbType = Int64), @p8='?' (DbType = Time), @p9='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Sales\" (\"BuyerId\", \"Date\", \"SalesPointId\", \"Time\", \"TotalAmount\")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING \"Id\";
+INSERT INTO \"Sales\" (\"BuyerId\", \"Date\", \"SalesPointId\", \"Time\", \"TotalAmount\")
+VALUES (@p5, @p6, @p7, @p8, @p9)
+RETURNING \"Id\";"
+2025-01-10 18:09:21 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("2"ms) [Parameters=["@p10='?' (DbType = Int64), @p11='?' (DbType = Int64), @p12='?' (DbType = Decimal), @p13='?' (DbType = Int32), @p14='?' (DbType = Int64), @p15='?' (DbType = Int64), @p16='?' (DbType = Decimal), @p17='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"SalesData\" (\"SaleDbModelId\", \"ProductId\", \"ProductIdAmount\", \"ProductQuantity\")
+VALUES (@p10, @p11, @p12, @p13)
+RETURNING \"Id\";
+INSERT INTO \"SalesData\" (\"SaleDbModelId\", \"ProductId\", \"ProductIdAmount\", \"ProductQuantity\")
+VALUES (@p14, @p15, @p16, @p17)
+RETURNING \"Id\";"
+2025-01-10 18:09:21 [Warning] Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer: The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-10 18:09:21 [Information] Microsoft.Hosting.Lifetime: Now listening on: "https://localhost:7071"
+2025-01-10 18:09:21 [Information] Microsoft.Hosting.Lifetime: Now listening on: "http://localhost:5246"
+2025-01-10 18:09:21 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-01-10 18:09:21 [Information] Microsoft.Hosting.Lifetime: Hosting environment: "Development"
+2025-01-10 18:09:21 [Information] Microsoft.Hosting.Lifetime: Content root path: "C:\Desktop\MyProjects\C#\Sales"
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - null null
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - 301 0 null 46.0196ms
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - null null
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 83.8082ms
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - null null
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - null null
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - null null
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - 200 143943 "text/css" 29.395ms
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - 200 339486 "text/javascript" 30.6714ms
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - 200 1096145 "text/javascript" 40.9244ms
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - null null
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 6.2886ms
+2025-01-10 18:09:22 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - null null
+2025-01-10 18:09:23 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 405.8952ms
+2025-01-10 18:09:23 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - null null
+2025-01-10 18:09:23 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2025-01-10 18:09:23 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 7.6432ms
+2025-01-10 18:09:58 [Information] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-01-10 18:10:22 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("92"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DROP DATABASE \"Sales\" WITH (FORCE);"
+2025-01-10 18:10:36 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("249"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE DATABASE \"Sales\";"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"__EFMigrationsHistory\" (
+    \"MigrationId\" character varying(150) NOT NULL,
+    \"ProductVersion\" character varying(32) NOT NULL,
+    CONSTRAINT \"PK___EFMigrationsHistory\" PRIMARY KEY (\"MigrationId\")
+);"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("43"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Migrations: Applying migration '"20250109113203_InitialMigration"'.
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"Buyers\" (
+    \"Id\" bigint GENERATED BY DEFAULT AS IDENTITY,
+    \"Name\" text NOT NULL,
+    CONSTRAINT \"PK_Buyers\" PRIMARY KEY (\"Id\")
+);"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"Products\" (
+    \"Id\" bigint GENERATED BY DEFAULT AS IDENTITY,
+    \"Name\" text NOT NULL,
+    \"Price\" numeric(18,2) NOT NULL,
+    CONSTRAINT \"PK_Products\" PRIMARY KEY (\"Id\")
+);"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"SalesPoints\" (
+    \"Id\" bigint GENERATED BY DEFAULT AS IDENTITY,
+    \"Name\" text NOT NULL,
+    CONSTRAINT \"PK_SalesPoints\" PRIMARY KEY (\"Id\")
+);"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"ProvidedProducts\" (
+    \"SalesPointDbModelId\" bigint NOT NULL,
+    \"Id\" integer GENERATED BY DEFAULT AS IDENTITY,
+    \"ProductId\" bigint NOT NULL,
+    \"ProductQuantity\" integer NOT NULL,
+    CONSTRAINT \"PK_ProvidedProducts\" PRIMARY KEY (\"SalesPointDbModelId\", \"Id\"),
+    CONSTRAINT \"FK_ProvidedProducts_SalesPoints_SalesPointDbModelId\" FOREIGN KEY (\"SalesPointDbModelId\") REFERENCES \"SalesPoints\" (\"Id\") ON DELETE CASCADE
+);"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"Sales\" (
+    \"Id\" bigint GENERATED BY DEFAULT AS IDENTITY,
+    \"Date\" date NOT NULL,
+    \"Time\" time without time zone NOT NULL,
+    \"SalesPointId\" bigint NOT NULL,
+    \"BuyerId\" bigint,
+    \"TotalAmount\" numeric(18,2) NOT NULL,
+    CONSTRAINT \"PK_Sales\" PRIMARY KEY (\"Id\"),
+    CONSTRAINT \"FK_Sales_Buyers_BuyerId\" FOREIGN KEY (\"BuyerId\") REFERENCES \"Buyers\" (\"Id\"),
+    CONSTRAINT \"FK_Sales_SalesPoints_SalesPointId\" FOREIGN KEY (\"SalesPointId\") REFERENCES \"SalesPoints\" (\"Id\") ON DELETE CASCADE
+);"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"SalesData\" (
+    \"SaleDbModelId\" bigint NOT NULL,
+    \"Id\" integer GENERATED BY DEFAULT AS IDENTITY,
+    \"ProductId\" bigint NOT NULL,
+    \"ProductQuantity\" integer NOT NULL,
+    \"ProductIdAmount\" numeric(18,2) NOT NULL,
+    CONSTRAINT \"PK_SalesData\" PRIMARY KEY (\"SaleDbModelId\", \"Id\"),
+    CONSTRAINT \"FK_SalesData_Sales_SaleDbModelId\" FOREIGN KEY (\"SaleDbModelId\") REFERENCES \"Sales\" (\"Id\") ON DELETE CASCADE
+);"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX \"IX_Sales_BuyerId\" ON \"Sales\" (\"BuyerId\");"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX \"IX_Sales_SalesPointId\" ON \"Sales\" (\"SalesPointId\");"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"__EFMigrationsHistory\" (\"MigrationId\", \"ProductVersion\")
+VALUES ('20250109113203_InitialMigration', '8.0.11');"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Products\" AS p)"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("19"ms) [Parameters=["@p0='?', @p1='?' (DbType = Decimal), @p2='?', @p3='?' (DbType = Decimal), @p4='?', @p5='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Products\" (\"Name\", \"Price\")
+VALUES (@p0, @p1)
+RETURNING \"Id\";
+INSERT INTO \"Products\" (\"Name\", \"Price\")
+VALUES (@p2, @p3)
+RETURNING \"Id\";
+INSERT INTO \"Products\" (\"Name\", \"Price\")
+VALUES (@p4, @p5)
+RETURNING \"Id\";"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"SalesPoints\" AS s)"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=["@p0='?', @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"SalesPoints\" (\"Name\")
+VALUES (@p0)
+RETURNING \"Id\";
+INSERT INTO \"SalesPoints\" (\"Name\")
+VALUES (@p1)
+RETURNING \"Id\";"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("4"ms) [Parameters=["@p2='?' (DbType = Int64), @p3='?' (DbType = Int64), @p4='?' (DbType = Int32), @p5='?' (DbType = Int64), @p6='?' (DbType = Int64), @p7='?' (DbType = Int32), @p8='?' (DbType = Int64), @p9='?' (DbType = Int64), @p10='?' (DbType = Int32), @p11='?' (DbType = Int64), @p12='?' (DbType = Int64), @p13='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"ProvidedProducts\" (\"SalesPointDbModelId\", \"ProductId\", \"ProductQuantity\")
+VALUES (@p2, @p3, @p4)
+RETURNING \"Id\";
+INSERT INTO \"ProvidedProducts\" (\"SalesPointDbModelId\", \"ProductId\", \"ProductQuantity\")
+VALUES (@p5, @p6, @p7)
+RETURNING \"Id\";
+INSERT INTO \"ProvidedProducts\" (\"SalesPointDbModelId\", \"ProductId\", \"ProductQuantity\")
+VALUES (@p8, @p9, @p10)
+RETURNING \"Id\";
+INSERT INTO \"ProvidedProducts\" (\"SalesPointDbModelId\", \"ProductId\", \"ProductQuantity\")
+VALUES (@p11, @p12, @p13)
+RETURNING \"Id\";"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Buyers\" AS b)"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("2"ms) [Parameters=["@p0='?', @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Buyers\" (\"Name\")
+VALUES (@p0)
+RETURNING \"Id\";
+INSERT INTO \"Buyers\" (\"Name\")
+VALUES (@p1)
+RETURNING \"Id\";"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Sales\" AS s)"
+2025-01-10 18:10:37 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("4"ms) [Parameters=["@p0='?' (DbType = Int64), @p1='?' (DbType = Date), @p2='?' (DbType = Int64), @p3='?' (DbType = Time), @p4='?' (DbType = Decimal), @p5='?' (DbType = Int64), @p6='?' (DbType = Date), @p7='?' (DbType = Int64), @p8='?' (DbType = Time), @p9='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Sales\" (\"BuyerId\", \"Date\", \"SalesPointId\", \"Time\", \"TotalAmount\")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING \"Id\";
+INSERT INTO \"Sales\" (\"BuyerId\", \"Date\", \"SalesPointId\", \"Time\", \"TotalAmount\")
+VALUES (@p5, @p6, @p7, @p8, @p9)
+RETURNING \"Id\";"
+2025-01-10 18:10:37 [Error] Microsoft.EntityFrameworkCore.Update: An exception occurred in the database while saving changes for context type '"Sales.Contexts.Context"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table \"Sales\" violates foreign key constraint \"FK_Sales_SalesPoints_SalesPointId\"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Update.Internal.NpgsqlModificationCommandBatch.Consume(RelationalDataReader reader, Boolean async, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table \"Sales\" violates foreign key constraint \"FK_Sales_SalesPoints_SalesPointId\"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Sales
+    ConstraintName: FK_Sales_SalesPoints_SalesPointId
+    File: ri_triggers.c
+    Line: 2619
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Update.Internal.NpgsqlModificationCommandBatch.Consume(RelationalDataReader reader, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Update.Internal.NpgsqlModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)"
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Sales" violates foreign key constraint "FK_Sales_SalesPoints_SalesPointId"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Update.Internal.NpgsqlModificationCommandBatch.Consume(RelationalDataReader reader, Boolean async, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Sales" violates foreign key constraint "FK_Sales_SalesPoints_SalesPointId"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Sales
+    ConstraintName: FK_Sales_SalesPoints_SalesPointId
+    File: ri_triggers.c
+    Line: 2619
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Update.Internal.NpgsqlModificationCommandBatch.Consume(RelationalDataReader reader, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Update.Internal.NpgsqlModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2025-01-10 18:10:57 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("74"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 18:10:57 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 18:10:57 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 18:10:57 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2025-01-10 18:10:57 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2025-01-10 18:10:57 [Information] Microsoft.EntityFrameworkCore.Migrations: No migrations were applied. The database is already up to date.
+2025-01-10 18:10:57 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Products\" AS p)"
+2025-01-10 18:10:57 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"SalesPoints\" AS s)"
+2025-01-10 18:10:57 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Buyers\" AS b)"
+2025-01-10 18:10:57 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Sales\" AS s)"
+2025-01-10 18:10:58 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("17"ms) [Parameters=["@p0='?' (DbType = Int64), @p1='?' (DbType = Date), @p2='?' (DbType = Int64), @p3='?' (DbType = Time), @p4='?' (DbType = Decimal), @p5='?' (DbType = Int64), @p6='?' (DbType = Date), @p7='?' (DbType = Int64), @p8='?' (DbType = Time), @p9='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Sales\" (\"BuyerId\", \"Date\", \"SalesPointId\", \"Time\", \"TotalAmount\")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING \"Id\";
+INSERT INTO \"Sales\" (\"BuyerId\", \"Date\", \"SalesPointId\", \"Time\", \"TotalAmount\")
+VALUES (@p5, @p6, @p7, @p8, @p9)
+RETURNING \"Id\";"
+2025-01-10 18:10:58 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand ("2"ms) [Parameters=["@p10='?' (DbType = Int64), @p11='?' (DbType = Int64), @p12='?' (DbType = Decimal), @p13='?' (DbType = Int32), @p14='?' (DbType = Int64), @p15='?' (DbType = Int64), @p16='?' (DbType = Decimal), @p17='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"SalesData\" (\"SaleDbModelId\", \"ProductId\", \"ProductIdAmount\", \"ProductQuantity\")
+VALUES (@p10, @p11, @p12, @p13)
+RETURNING \"Id\";
+INSERT INTO \"SalesData\" (\"SaleDbModelId\", \"ProductId\", \"ProductIdAmount\", \"ProductQuantity\")
+VALUES (@p14, @p15, @p16, @p17)
+RETURNING \"Id\";"
+2025-01-10 18:10:58 [Warning] Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer: The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-10 18:10:58 [Information] Microsoft.Hosting.Lifetime: Now listening on: "https://localhost:7071"
+2025-01-10 18:10:58 [Information] Microsoft.Hosting.Lifetime: Now listening on: "http://localhost:5246"
+2025-01-10 18:10:58 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-01-10 18:10:58 [Information] Microsoft.Hosting.Lifetime: Hosting environment: "Development"
+2025-01-10 18:10:58 [Information] Microsoft.Hosting.Lifetime: Content root path: "C:\Desktop\MyProjects\C#\Sales"
+2025-01-10 18:10:58 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - null null
+2025-01-10 18:10:58 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger""" - 301 0 null 68.5043ms
+2025-01-10 18:10:58 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - null null
+2025-01-10 18:10:58 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 80.8796ms
+2025-01-10 18:10:58 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - null null
+2025-01-10 18:10:58 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - null null
+2025-01-10 18:10:58 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - null null
+2025-01-10 18:10:58 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2025-01-10 18:10:58 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2025-01-10 18:10:58 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2025-01-10 18:10:58 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui.css""" - 200 143943 "text/css" 29.115ms
+2025-01-10 18:10:58 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-standalone-preset.js""" - 200 339486 "text/javascript" 30.8235ms
+2025-01-10 18:10:58 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/swagger-ui-bundle.js""" - 200 1096145 "text/javascript" 33.1866ms
+2025-01-10 18:10:59 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - null null
+2025-01-10 18:10:59 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2025-01-10 18:10:59 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 6.2671ms
+2025-01-10 18:10:59 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - null null
+2025-01-10 18:10:59 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished "HTTP/2" "GET" "https"://"localhost:7071""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 122.3997ms
+2025-01-10 18:11:01 [Information] Microsoft.Hosting.Lifetime: Application is shutting down...
