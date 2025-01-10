@@ -62,10 +62,10 @@ public class BuyerRepositoryTests
         var buyer = new Faker<Buyer>()
            .RuleFor(b => b.Name, f => f.Name.FullName())
            .Generate();
-        var actualId = await _unitOfWork.BuyerRepository.Create(buyer);
+        var actual = await _unitOfWork.BuyerRepository.Create(buyer);
         await _unitOfWork.SaveChangesAsync();
-        Assert.That(actualId, Is.GreaterThan(0));
-        Assert.That(actualId, Is.EqualTo(id));
+        Assert.That(actual.Id, Is.GreaterThan(0));
+        Assert.That(actual.Id, Is.EqualTo(id));
     }
 
     [Test]
