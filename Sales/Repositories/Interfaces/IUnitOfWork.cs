@@ -5,12 +5,12 @@ namespace Sales.Repositories.Interfaces;
 
 public interface IUnitOfWork
 {
-    public IRepository<Buyer> BuyerRepository { get;}
-    public IRepository<Product> ProductRepository { get; }
-    public IRepository<Sale> SaleRepository { get; }
-    public IRepository<SalesPoint> SalesPointRepository { get; }
+    public IRepository<Buyer, BuyerDbModel> BuyerRepository { get;}
+    public IRepository<Product, ProductDbModel> ProductRepository { get; }
+    public IRepository<Sale, SaleDbModel> SaleRepository { get; }
+    public IRepository<SalesPoint, SalesPointDbModel> SalesPointRepository { get; }
 
-    IRepository<TModel> GetRepository<TModel>(); 
+    IRepository<TModel, DbModel> GetRepository<TModel, DbModel>(); 
     Task<int> SaveChangesAsync();
     Task BeginTransactionAsync();
     Task CommitAsync();

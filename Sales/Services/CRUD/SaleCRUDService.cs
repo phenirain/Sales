@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Sales.Entities.DbModels;
 using Sales.Entities.DomainModels;
 using Sales.Entities.ValueObjects;
 using Sales.Exceptions;
@@ -10,7 +11,7 @@ using Sales.Services.Dtos.ValueObjectDtos;
 
 namespace Sales.Services.CRUD;
 
-public class SaleCRUDService: AbstractCRUDService<SaleCreateDto, SaleUpdateDto, SaleGetDto, Sale>
+public class SaleCRUDService: AbstractCRUDService<SaleCreateDto, SaleUpdateDto, SaleGetDto, Sale, SaleDbModel>
 {
     public SaleCRUDService(IUnitOfWork unitOfWork, IMapper mapper, ILogger<SaleCRUDService> logger)
         : base(unitOfWork, mapper, logger)
@@ -28,9 +29,9 @@ public class SaleCRUDService: AbstractCRUDService<SaleCreateDto, SaleUpdateDto, 
                 sale.AddSaleData(saleData);
             }
 
-            long id = await UnitOfWork.SaleRepository.Create(sale);
+            var created = await UnitOfWork.SaleRepository.Create(sale);
             await UnitOfWork.SaveChangesAsync();
-            return id;
+            return created.Id;
         }
         catch (Exception ex)
         {

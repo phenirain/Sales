@@ -10,7 +10,7 @@ using Sales.Repositories.Interfaces;
 
 namespace Sales.Repositories;
 
-public class SaleRepository: AbstractRepository<SaleDbModel, Sale>
+public class SaleRepository: AbstractRepository<Sale, SaleDbModel>
 {
 
     public SaleRepository(Context context, IMapper mapper) : base(context, mapper)

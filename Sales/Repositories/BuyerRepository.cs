@@ -8,7 +8,7 @@ using Sales.Services.Dtos.CreateUpdate;
 
 namespace Sales.Repositories;
 
-public class BuyerRepository: AbstractRepository<BuyerDbModel, Buyer>
+public class BuyerRepository: AbstractRepository<Buyer, BuyerDbModel>
 {
     public BuyerRepository(Context context, IMapper mapper) : base(context, mapper)
     {

@@ -8,7 +8,7 @@ using Sales.Repositories.Interfaces;
 
 namespace Sales.Repositories.Abstracts;
 
-public abstract class AbstractRepository<DbModel, Model> : IRepository<Model> where Model: IGetId where DbModel : class, IGetId
+public abstract class AbstractRepository<Model, DbModel> : IRepository<Model, DbModel> where Model: IGetId where DbModel : class, IGetId
 {
     protected readonly Context Context;
     protected readonly IMapper Mapper;
@@ -35,11 +35,11 @@ public abstract class AbstractRepository<DbModel, Model> : IRepository<Model> wh
         return await Context.Set<DbModel>().ProjectTo<Model>(Mapper.ConfigurationProvider).Where(m => m.Id == id).FirstOrDefaultAsync();
     }
 
-    public async Task<long> Create(Model model)
+    public async Task<DbModel> Create(Model model)
     {
         var dbModel = Mapper.Map<DbModel>(model);
         await Context.Set<DbModel>().AddAsync(dbModel);
-        return dbModel.Id;
+        return dbModel;
     }
 
     public async Task Update(Model model)

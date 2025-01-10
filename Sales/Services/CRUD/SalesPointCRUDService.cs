@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Sales.Entities.DbModels;
 using Sales.Entities.DomainModels;
 using Sales.Entities.ValueObjects;
 using Sales.Exceptions;
@@ -9,7 +10,7 @@ using Sales.Services.Dtos.Get;
 
 namespace Sales.Services.CRUD;
 
-public class SalesPointCRUDService: AbstractCRUDService<SalesPointCreateDto, SalesPointUpdateDto, SalesPointGetDto, SalesPoint>
+public class SalesPointCRUDService: AbstractCRUDService<SalesPointCreateDto, SalesPointUpdateDto, SalesPointGetDto, SalesPoint, SalesPointDbModel>
 {
     public SalesPointCRUDService(IUnitOfWork unitOfWork, IMapper mapper, ILogger<SalesPointCRUDService> logger)
         : base(unitOfWork, mapper, logger)

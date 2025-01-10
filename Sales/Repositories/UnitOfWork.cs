@@ -13,33 +13,33 @@ public class UnitOfWork: IUnitOfWork
     private readonly Context _context;
     private IDbContextTransaction? _currentTransaction;
     
-    public IRepository<Buyer> BuyerRepository { get;}
-    public IRepository<Product> ProductRepository { get; }
-    public IRepository<Sale> SaleRepository { get; }
-    public IRepository<SalesPoint> SalesPointRepository { get; }
+    public IRepository<Buyer, BuyerDbModel> BuyerRepository { get;}
+    public IRepository<Product, ProductDbModel> ProductRepository { get; }
+    public IRepository<Sale, SaleDbModel> SaleRepository { get; }
+    public IRepository<SalesPoint, SalesPointDbModel> SalesPointRepository { get; }
 
     public UnitOfWork(Context context, IMapper mapper)
     {
         _context = context;
         
         BuyerRepository = new BuyerRepository(_context, mapper);
-        ProductRepository = new GenericRepository<ProductDbModel, Product>(_context, mapper);
+        ProductRepository = new GenericRepository<Product, ProductDbModel>(_context, mapper);
         SaleRepository = new SaleRepository(_context, mapper);
         SalesPointRepository = new SalesPointRepository(_context, mapper);
     }
 
-    public IRepository<TModel> GetRepository<TModel>()
+    public IRepository<TModel, DbModel> GetRepository<TModel, DbModel>()
     {
         // В теории можно реализовать через DI Container, и в конструкторе UnitOfWork вытягивать объекты классов из DI
         // а тут просто через TModel получать из DI нужный репозиторий
         if (typeof(TModel) == typeof(Buyer))
-            return (IRepository<TModel>)BuyerRepository;
+            return (IRepository<TModel, DbModel>)BuyerRepository;
         if (typeof(TModel) == typeof(Product))
-            return (IRepository<TModel>)ProductRepository;
+            return (IRepository<TModel, DbModel>)ProductRepository;
         if (typeof(TModel) == typeof(Sale))
-            return (IRepository<TModel>)SaleRepository;
+            return (IRepository<TModel, DbModel>)SaleRepository;
         if (typeof(TModel) == typeof(SalesPoint))
-            return (IRepository<TModel>)SalesPointRepository;
+            return (IRepository<TModel, DbModel>)SalesPointRepository;
         throw new RepositoryNotFound(typeof(TModel).Name);
     }
     

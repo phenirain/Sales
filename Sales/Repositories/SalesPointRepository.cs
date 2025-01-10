@@ -8,7 +8,7 @@ using Sales.Repositories.Abstracts;
 
 namespace Sales.Repositories;
 
-public class SalesPointRepository: AbstractRepository<SalesPointDbModel, SalesPoint>
+public class SalesPointRepository: AbstractRepository<SalesPoint, SalesPointDbModel>
 {
     public SalesPointRepository(Context context, IMapper mapper) : base(context, mapper)
     {
