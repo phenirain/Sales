@@ -10,6 +10,7 @@ using Sales.Services.Dtos.CreateUpdate;
 using Sales.Services.Dtos.Get;
 using Sales.Services.Interfaces;
 using Sales.Services.Mapping;
+using Sales.Support;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -76,5 +77,13 @@ app.MapControllers();
 app.UseMiddleware<AuthMiddleware>();
 app.UseMiddleware<ExceptionHandlerMiddleware>();
 app.UseHttpsRedirection();
+
+using (var scope = app.Services.CreateScope())
+{
+
+    var context = scope.ServiceProvider.GetRequiredService<Context>();
+    context.Database.Migrate();
+    DatabaseInitializer.Seed(context);
+}
 
 app.Run();
