@@ -22,8 +22,8 @@ public class UnitOfWork: IUnitOfWork
     {
         _context = context;
         
-        BuyerRepository = new Repository<BuyerDbModel, Buyer>(_context, mapper);
-        ProductRepository = new Repository<ProductDbModel, Product>(_context, mapper);
+        BuyerRepository = new BuyerRepository(_context, mapper);
+        ProductRepository = new GenericRepository<ProductDbModel, Product>(_context, mapper);
         SaleRepository = new SaleRepository(_context, mapper);
         SalesPointRepository = new SalesPointRepository(_context, mapper);
     }
