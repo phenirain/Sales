@@ -12,74 +12,90 @@ namespace Sales.Services.CRUD;
 
 public class SaleCRUDService: AbstractCRUDService<SaleCreateDto, SaleUpdateDto, SaleGetDto, Sale>
 {
-    public SaleCRUDService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
+    public SaleCRUDService(IUnitOfWork unitOfWork, IMapper mapper, ILogger<SaleCRUDService> logger)
+        : base(unitOfWork, mapper, logger)
     {
     }
 
     public override async Task<long> Create(SaleCreateDto dto)
     {
-        ArgumentNullException.ThrowIfNull(dto);
-        var sale = Mapper.Map<Sale>(dto);
-        foreach (var saleDataDto in dto.SaleData)
+        try
         {
-            var saleData = await GetSaleData(saleDataDto);
-            sale.AddSaleData(saleData);
+            var sale = Mapper.Map<Sale>(dto);
+            foreach (var saleDataDto in dto.SaleData)
+            {
+                var saleData = await GetSaleData(saleDataDto);
+                sale.AddSaleData(saleData);
+            }
+
+            long id = await UnitOfWork.SaleRepository.Create(sale);
+            await UnitOfWork.SaveChangesAsync();
+            return id;
         }
-        long id = await UnitOfWork.SaleRepository.Create(sale);
-        await UnitOfWork.SaveChangesAsync();
-        return id;
+        catch (Exception ex)
+        {
+            Logger.LogError($"Error creating sale: {ex.Message}");
+            throw;
+        }
     }
 
     public override async Task Update(long id, SaleUpdateDto dto)
     {
-        ArgumentNullException.ThrowIfNull(dto);
-        Sale sale = await GetModelById(id);
-        var updatedSale = Mapper.Map(dto, sale);
-        if (dto.AddedSaleData.Count > 0)
+        try
         {
-            foreach (var saleDataDto in dto.AddedSaleData)
+            Sale sale = await GetModelById(id);
+            var updatedSale = Mapper.Map(dto, sale);
+            if (dto.AddedSaleData.Count > 0)
             {
-                var saleData = await GetSaleData(saleDataDto);
-                updatedSale.AddSaleData(saleData);
-            }
-        }
-
-        if (dto.UpdatedSaleData.Count > 0)
-        {
-            foreach (var saleDataDto in dto.UpdatedSaleData)
-            {
-                var saleData = await GetSaleData(saleDataDto);
-                var oldSaleData = sale.SaleData.FirstOrDefault(s => s.ProductId == saleData.ProductId);
-                if (oldSaleData != null)
+                foreach (var saleDataDto in dto.AddedSaleData)
                 {
-                    updatedSale.RemoveSaleData(oldSaleData);
+                    var saleData = await GetSaleData(saleDataDto);
                     updatedSale.AddSaleData(saleData);
                 }
-                else
-                {
-                    throw new NotFoundException($"SaleData with ProductId: {saleData.ProductId} not found");
-                }
             }
-        }
 
-        if (dto.RemovedSaleData.Count > 0)
-        {
-            foreach (var saleDataDto in dto.RemovedSaleData)
+            if (dto.UpdatedSaleData.Count > 0)
             {
-                var oldSaleData = sale.SaleData.FirstOrDefault(s => s.ProductId == saleDataDto.ProductId);
-                if (oldSaleData != null)
+                foreach (var saleDataDto in dto.UpdatedSaleData)
                 {
-                    updatedSale.RemoveSaleData(oldSaleData);
-                }
-                else
-                {
-                    throw new NotFoundException($"SaleData with ProductId: {saleDataDto.ProductId} not found");
+                    var saleData = await GetSaleData(saleDataDto);
+                    var oldSaleData = sale.SaleData.FirstOrDefault(s => s.ProductId == saleData.ProductId);
+                    if (oldSaleData != null)
+                    {
+                        updatedSale.RemoveSaleData(oldSaleData);
+                        updatedSale.AddSaleData(saleData);
+                    }
+                    else
+                    {
+                        throw new NotFoundException($"SaleData with ProductId: {saleData.ProductId} not found");
+                    }
                 }
             }
-        }
 
-        await UnitOfWork.SaleRepository.Update(updatedSale);
-        await UnitOfWork.SaveChangesAsync();
+            if (dto.RemovedSaleData.Count > 0)
+            {
+                foreach (var saleDataDto in dto.RemovedSaleData)
+                {
+                    var oldSaleData = sale.SaleData.FirstOrDefault(s => s.ProductId == saleDataDto.ProductId);
+                    if (oldSaleData != null)
+                    {
+                        updatedSale.RemoveSaleData(oldSaleData);
+                    }
+                    else
+                    {
+                        throw new NotFoundException($"SaleData with ProductId: {saleDataDto.ProductId} not found");
+                    }
+                }
+            }
+
+            await UnitOfWork.SaleRepository.Update(updatedSale);
+            await UnitOfWork.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Error updating sale with id: {id}: {ex.Message}");
+            throw;
+        }
     }
 
     private async Task<SaleData> GetSaleData(SaleDataCreateDto dto)

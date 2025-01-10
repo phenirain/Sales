@@ -9,7 +9,8 @@ namespace Sales.Services.CRUD;
 
 public class BuyerCRUDService: AbstractCRUDService<BuyerDto, BuyerDto, BuyerGetDto, Buyer>
 {
-    public BuyerCRUDService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
+    public BuyerCRUDService(IUnitOfWork unitOfWork, IMapper mapper, ILogger<BuyerCRUDService> logger) 
+        : base(unitOfWork, mapper, logger)
     {
     }
 }

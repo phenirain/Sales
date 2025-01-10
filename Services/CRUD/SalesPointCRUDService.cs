@@ -11,13 +11,15 @@ namespace Sales.Services.CRUD;
 
 public class SalesPointCRUDService: AbstractCRUDService<SalesPointCreateDto, SalesPointUpdateDto, SalesPointGetDto, SalesPoint>
 {
-    public SalesPointCRUDService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
+    public SalesPointCRUDService(IUnitOfWork unitOfWork, IMapper mapper, ILogger<SalesPointCRUDService> logger)
+        : base(unitOfWork, mapper, logger)
     {
     }
 
     public override async Task Update(long id, SalesPointUpdateDto dto)
     {
-        ArgumentNullException.ThrowIfNull(dto);
+        try
+        {
         SalesPoint salesPoint = await GetModelById(id);
         var updatedSalesPoint = Mapper.Map(dto, salesPoint);
 
@@ -70,6 +72,12 @@ public class SalesPointCRUDService: AbstractCRUDService<SalesPointCreateDto, Sal
         
         await UnitOfWork.SalesPointRepository.Update(updatedSalesPoint);
         await UnitOfWork.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Error updating SalesPoint with id: {id}: {ex.Message}");
+            throw;
+        }
     }
     
     

@@ -12,48 +12,88 @@ public class AbstractCRUDService<CreateDto, UpdateDto, GetDto, TModel>: ICRUDSer
 {
     protected readonly IUnitOfWork UnitOfWork;
     protected readonly IMapper Mapper;
+    protected readonly ILogger<AbstractCRUDService<CreateDto, UpdateDto, GetDto, TModel>> Logger;
     
-    public AbstractCRUDService(IUnitOfWork unitOfWork, IMapper mapper)
+    public AbstractCRUDService(IUnitOfWork unitOfWork, IMapper mapper, ILogger<AbstractCRUDService<CreateDto, UpdateDto, GetDto, TModel>> logger)
     {
         UnitOfWork = unitOfWork;
         Mapper = mapper;
+        Logger = logger;
     }
     
     
     public async Task<IEnumerable<GetDto>> GetAll(int limit, int offset)
     {
-        return Mapper.Map<IEnumerable<GetDto>>(await UnitOfWork.GetRepository<TModel>().GetAll(limit, offset));
+        try
+        {
+            return Mapper.Map<IEnumerable<GetDto>>(await UnitOfWork.GetRepository<TModel>().GetAll(limit, offset));
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, $"An error occurred while getting all {typeof(TModel).Name}s.");
+            throw;
+        }
     }
 
     public async Task<GetDto> GetById(long id)
     {
-        var result = await GetModelById(id);
-        return Mapper.Map<GetDto>(result);
+        try
+        {
+            var result = await GetModelById(id);
+            return Mapper.Map<GetDto>(result);
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, $"An error occurred while getting {typeof(TModel).Name} by id: {id}.");
+            throw;
+        }
     }
 
     public virtual async Task<long> Create(CreateDto createDto)
     {
-        ArgumentNullException.ThrowIfNull(createDto);
-        var model = Mapper.Map<TModel>(createDto);
-        long id = await UnitOfWork.GetRepository<TModel>().Create(model);
-        await UnitOfWork.SaveChangesAsync();
-        return id;
+        try
+        {
+            var model = Mapper.Map<TModel>(createDto);
+            long id = await UnitOfWork.GetRepository<TModel>().Create(model);
+            await UnitOfWork.SaveChangesAsync();
+            return id;
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, $"An error occurred while creating a new {typeof(TModel).Name}.");
+            throw;
+        }
     }
 
     public virtual async Task Update(long id, UpdateDto updateDto)
     {
-        ArgumentNullException.ThrowIfNull(updateDto);
-        var model = Mapper.Map<TModel>(updateDto);
-        model.Id = id;
-        await UnitOfWork.GetRepository<TModel>().Update(model);
-        await UnitOfWork.SaveChangesAsync();
+        try
+        {
+            var model = Mapper.Map<TModel>(updateDto);
+            model.Id = id;
+            await UnitOfWork.GetRepository<TModel>().Update(model);
+            await UnitOfWork.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, $"An error occurred while updating {typeof(TModel).Name} by id: {id}.");
+            throw;
+        }
     }
 
     public async Task Delete(long id)
     {
-        var model = await GetModelById(id);
-        UnitOfWork.GetRepository<TModel>().Delete(model);
-        await UnitOfWork.SaveChangesAsync();
+        try
+        {
+            var model = await GetModelById(id);
+            UnitOfWork.GetRepository<TModel>().Delete(model);
+            await UnitOfWork.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, $"An error occurred while deleting {typeof(TModel).Name} by id: {id}.");
+            throw;
+        }
     }
 
     protected async Task<TModel> GetModelById(long id)
