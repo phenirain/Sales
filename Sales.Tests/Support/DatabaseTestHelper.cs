@@ -34,7 +34,6 @@ public static class TestHelper
         var context = new Context(options);
         
         context.Database.Migrate();
-        DatabaseInitializer.Seed(context);
         
         return context;
     }

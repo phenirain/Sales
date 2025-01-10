@@ -6,5 +6,5 @@ public interface IRepository<Model>
     Task<Model?> GetById(long id);
     Task<long> Create(Model model);
     Task Update(Model model);
-    void Delete(Model model);
+    Task Delete(Model model);
 }

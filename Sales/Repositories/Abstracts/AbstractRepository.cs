@@ -54,7 +54,7 @@ public abstract class AbstractRepository<DbModel, Model> : IRepository<Model> wh
         Context.Set<DbModel>().Update(dbModel);
     }
 
-    public void Delete(Model model)
+    public async Task Delete(Model model)
     {
         var dbModel = Context.Set<DbModel>().Where(m => m.Id == model.Id).FirstOrDefault();
         if (dbModel == null)
