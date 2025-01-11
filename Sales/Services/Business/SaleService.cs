@@ -35,30 +35,21 @@ public class SaleService: ISaleService
             if (providedProduct == null)
                 throw new NotFoundException(
                     $"Product with id : {request.ProductId} not found at sales point with id : {request.SalesPointId}");
-            if (providedProduct.ProductQuantity < request.ProductQuantity)
-            {
-                throw new OutOfStockException(request.ProductId, providedProduct.ProductQuantity,
-                    request.ProductQuantity);
-            }
-
-            Product product = await _unitOfWork.ProductRepository.GetById(providedProduct.ProductId);
 
             await _unitOfWork.BeginTransactionAsync();
+            
+            Product product = await _unitOfWork.ProductRepository.GetById(providedProduct.ProductId);
 
-            providedProduct.ProductQuantity -= request.ProductQuantity;
+            providedProduct.SellProduct(request.ProductQuantity);
             SaleData saleData = new SaleData
             (
                 productId: request.ProductId,
-                productQuantity: request.ProductQuantity,
-                productPrice: product!.Price
+                productQuantity: request.ProductQuantity
             );
+            saleData.SetProductIdAmountByPrice(product!.Price);
 
             long? buyerId = long.TryParse(stringBuyerId, out var parsedBuyerId) ? parsedBuyerId : null;
-            Sale sale = new Sale
-            {
-                SalesPointId = request.SalesPointId,
-                BuyerId = buyerId
-            };
+            Sale sale = new Sale(request.SalesPointId, buyerId: buyerId);
             sale.AddSaleData(saleData);
 
             await _unitOfWork.SalesPointRepository.Update(salesPoint);

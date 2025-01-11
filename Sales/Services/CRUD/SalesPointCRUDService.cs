@@ -31,10 +31,10 @@ public class SalesPointCRUDService: AbstractCRUDService<SalesPointCreateDto, Sal
                 var oldPp =
                     salesPoint.ProvidedProducts.FirstOrDefault(pp => pp.ProductId == ppDto.ProductId);
                 if (oldPp == null)
-                    updatedSalesPoint.ProvidedProducts.Add(Mapper.Map<ProvidedProduct>(ppDto));
+                    updatedSalesPoint.AddProvidedProduct(Mapper.Map<ProvidedProduct>(ppDto));
                 else
                 {
-                    oldPp.ProductQuantity += ppDto.ProductQuantity;
+                    oldPp.AddProduct(ppDto.ProductQuantity);
                 }
             }
         }
@@ -47,7 +47,8 @@ public class SalesPointCRUDService: AbstractCRUDService<SalesPointCreateDto, Sal
                     salesPoint.ProvidedProducts.FirstOrDefault(pp => pp.ProductId == ppDto.ProductId);
                 if (oldPp != null)
                 {
-                    oldPp.ProductQuantity = ppDto.ProductQuantity;
+                    updatedSalesPoint.RemoveProvidedProduct(oldPp);
+                    updatedSalesPoint.AddProvidedProduct(Mapper.Map<ProvidedProduct>(ppDto));
                 }
                 else
                 {
@@ -63,7 +64,7 @@ public class SalesPointCRUDService: AbstractCRUDService<SalesPointCreateDto, Sal
                 var oldPp = 
                     salesPoint.ProvidedProducts.FirstOrDefault(pp => pp.ProductId == ppDto.ProductId);
                 if (oldPp!= null)
-                    updatedSalesPoint.ProvidedProducts.Remove(oldPp);
+                    updatedSalesPoint.RemoveProvidedProduct(oldPp);
                 else
                 {
                     throw new NotFoundException($"ProvidedProduct with ProductId: {ppDto.ProductId} not found");
