@@ -1,5 +1,4 @@
-﻿using Sales.Entities.Interfaces;
-
+﻿
 namespace Sales.Entities.DomainModels;
 
 public class Buyer: BaseModel

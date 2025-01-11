@@ -1,5 +1,4 @@
-﻿using Sales.Entities.Interfaces;
-using Sales.Entities.ValueObjects;
+﻿using Sales.Entities.ValueObjects;
 
 namespace Sales.Entities.DomainModels;
 

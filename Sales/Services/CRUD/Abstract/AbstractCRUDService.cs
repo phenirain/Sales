@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Sales.Entities.DbModels;
 using Sales.Entities.DomainModels;
-using Sales.Entities.Interfaces;
 using Sales.Exceptions;
 using Sales.Repositories.Interfaces;
 using Sales.Services.Dtos.Get;
