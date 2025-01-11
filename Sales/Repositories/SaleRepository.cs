@@ -24,14 +24,7 @@ public class SaleRepository: AbstractRepository<Sale, SaleDbModel>
             .Take(limit)
             .Include(s => s.SaleData)
             .ToListAsync();
-        var sales = new Sale[limit];
-        for (var i = 0; i < salesDbModels.Count; i++)
-        {
-            sales[i] = Mapper.Map(salesDbModels[i], new Sale());
-            sales[i].AddSaleDataRange(Mapper.Map<List<SaleData>>(salesDbModels[i].SaleData.ToList()));
-        }
-
-        return sales;
+        return Mapper.Map<List<Sale>>(salesDbModels);
     }
 
     public override async Task<Sale?> GetById(long id)
@@ -43,7 +36,6 @@ public class SaleRepository: AbstractRepository<Sale, SaleDbModel>
             .FirstOrDefaultAsync();
         if (saleDbModel == null) return null;
         var sale = Mapper.Map<Sale>(saleDbModel);
-        sale.AddSaleDataRange(Mapper.Map<List<SaleData>>(saleDbModel.SaleData));
         return sale;
     }
 }
