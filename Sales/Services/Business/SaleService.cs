@@ -35,7 +35,7 @@ public class SaleService: ISaleService
             if (providedProduct == null)
                 throw new NotFoundException(
                     $"Product with id : {request.ProductId} not found at sales point with id : {request.SalesPointId}");
-            if (providedProduct.ProductQuantity <= request.ProductQuantity)
+            if (providedProduct.ProductQuantity < request.ProductQuantity)
             {
                 throw new OutOfStockException(request.ProductId, providedProduct.ProductQuantity,
                     request.ProductQuantity);

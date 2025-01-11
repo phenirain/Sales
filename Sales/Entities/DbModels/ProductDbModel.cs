@@ -4,10 +4,8 @@ using Sales.Entities.DomainModels;
 
 namespace Sales.Entities.DbModels;
 
-public class ProductDbModel: IGetId
+public class ProductDbModel: BaseDbModel
 {
-    [Key]
-    public long Id { get; set; }
     
     [Required]
     public string Name { get; set; }

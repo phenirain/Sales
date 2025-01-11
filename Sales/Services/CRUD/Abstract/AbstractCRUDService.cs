@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Sales.Entities.DbModels;
 using Sales.Entities.DomainModels;
 using Sales.Entities.Interfaces;
 using Sales.Exceptions;
@@ -9,8 +10,8 @@ using Sales.Services.Interfaces;
 namespace Sales.Services.CRUD.Abstract;
 
 public class AbstractCRUDService<CreateDto, UpdateDto, GetDto, TModel, DbModel>: ICRUDService<CreateDto, UpdateDto, GetDto>
-    where TModel: ISetId
-    where DbModel: IGetId
+    where TModel: BaseModel
+    where DbModel: BaseDbModel
 {
     protected readonly IUnitOfWork UnitOfWork;
     protected readonly IMapper Mapper;

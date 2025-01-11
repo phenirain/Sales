@@ -3,9 +3,8 @@ using Sales.Entities.ValueObjects;
 
 namespace Sales.Entities.DomainModels;
 
-public class Sale: IGetId, ISetId
+public class Sale: BaseModel
 {
-    public long Id { get; set; }
     public DateOnly Date { get; set; } = DateOnly.FromDateTime(DateTime.Now);
     public TimeOnly Time { get; set; } = TimeOnly.FromDateTime(DateTime.Now);
     public long SalesPointId { get; set; }

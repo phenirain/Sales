@@ -2,13 +2,14 @@
 using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
 using Sales.Contexts;
+using Sales.Entities.DbModels;
 using Sales.Entities.DomainModels;
 using Sales.Exceptions;
 using Sales.Repositories.Interfaces;
 
 namespace Sales.Repositories.Abstracts;
 
-public abstract class AbstractRepository<Model, DbModel> : IRepository<Model, DbModel> where Model: IGetId where DbModel : class, IGetId
+public abstract class AbstractRepository<Model, DbModel> : IRepository<Model, DbModel> where Model: BaseModel where DbModel : BaseDbModel
 {
     protected readonly Context Context;
     protected readonly IMapper Mapper;

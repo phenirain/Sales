@@ -3,9 +3,8 @@ using Sales.Entities.ValueObjects;
 
 namespace Sales.Entities.DomainModels;
 
-public class SalesPoint: IGetId, ISetId
+public class SalesPoint: BaseModel
 {
-    public long Id { get; set; }
     public string Name { get; set; }
     public List<ProvidedProduct> ProvidedProducts { get; set; }
 }

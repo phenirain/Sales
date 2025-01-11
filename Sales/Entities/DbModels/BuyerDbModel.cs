@@ -3,10 +3,8 @@ using Sales.Entities.DomainModels;
 
 namespace Sales.Entities.DbModels;
 
-public class BuyerDbModel: IGetId
+public class BuyerDbModel: BaseDbModel
 {
-    [Key]
-    public long Id { get; set; }
 
     [Required]
     public string Name { get; set; }

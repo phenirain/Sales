@@ -4,10 +4,8 @@ using Sales.Entities.DomainModels;
 
 namespace Sales.Entities.DbModels;
 
-public class SaleDbModel: IGetId
+public class SaleDbModel: BaseDbModel
 {
-    [Key]
-    public long Id { get; set; }
     
     [Required]
     public DateOnly Date { get; set; }
