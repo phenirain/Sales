@@ -5,34 +5,39 @@ namespace Sales.Entities.DomainModels;
 public class SalesPoint: BaseModel
 {
     public string Name { get; private set; }
-    public List<ProvidedProduct> ProvidedProducts { get; private set; }
+    
+    public IReadOnlyList<ProvidedProduct> ProvidedProducts
+    {
+        get => _providedProducts;
+    }
+    public List<ProvidedProduct> _providedProducts;
     
     public SalesPoint(string name)
     {
         Name = name;
-        ProvidedProducts = new List<ProvidedProduct>();
+        _providedProducts = new List<ProvidedProduct>();
     }
 
     public void AddProvidedProduct(ProvidedProduct pp)
     {
         if (pp == null)
             throw new ArgumentNullException(nameof(pp));
-        ProvidedProduct? oldPp = ProvidedProducts.FirstOrDefault(p => p.ProductId == pp.ProductId);
+        ProvidedProduct? oldPp = _providedProducts.FirstOrDefault(p => p.ProductId == pp.ProductId);
         if (oldPp != null)
         {
             pp = new ProvidedProduct(pp.ProductId, pp.ProductQuantity + oldPp.ProductQuantity);
-            ProvidedProducts.Remove(oldPp);        
+            _providedProducts.Remove(oldPp);        
         }
             
-        ProvidedProducts.Add(pp);
+        _providedProducts.Add(pp);
     }
 
     public void RemoveProvidedProduct(ProvidedProduct pp)
     {
         if (pp == null)
             throw new ArgumentNullException(nameof(pp));
-        if (ProvidedProducts.Contains(pp))
-            ProvidedProducts.Remove(pp);
+        if (_providedProducts.Contains(pp))
+            _providedProducts.Remove(pp);
     }
 
     public void AddProvidedProductRange(List<ProvidedProduct> pps)
