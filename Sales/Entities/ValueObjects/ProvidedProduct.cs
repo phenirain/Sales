@@ -12,6 +12,11 @@ public class ProvidedProduct
         ProductId = productId;
         ProductQuantity = productQuantity;
     }
+    
+    public void AddProduct(int productQuantity)
+    {
+        ProductQuantity += productQuantity;
+    }
 
     public void SellProduct(int productQuantity)
     {
