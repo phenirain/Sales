@@ -2,19 +2,28 @@
 
 public class SaleData
 {
-    public long ProductId { get; set; }
-    public int ProductQuantity { get; set; }
+    public long ProductId { get; private set; }
+    public int ProductQuantity { get; private set; }
     private decimal _productIdAmount;
     public decimal ProductIdAmount
     {
         get => _productIdAmount;
     }
 
-    public SaleData(long productId, int productQuantity, decimal productPrice)
+    public SaleData(long productId, int productQuantity)
     {
         ProductId = productId;
+        SetProductQuantity(productQuantity);
+    }
+
+    private void SetProductQuantity(int productQuantity)
+    {
+        if (productQuantity <= 0)
+        {
+            throw new ArgumentException("Product quantity must be greater than zero");
+        }
+
         ProductQuantity = productQuantity;
-        SetProductIdAmountByPrice(productPrice);
     }
 
     public void SetProductIdAmountByPrice(decimal productPrice)

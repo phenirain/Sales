@@ -19,37 +19,61 @@ public class EntityMapperProfile: Profile
 
     public void CreateBuyerMapping()
     {
-        CreateMap<BuyerDbModel, Buyer>();
+        CreateMap<BuyerDbModel, Buyer>()
+            .ConstructUsing(src => new Buyer(src.Name, src.Sales.Select(s => s.Id)));
         CreateMap<Buyer, BuyerDbModel>();
     }
 
     public void CreateProductMapping()
     {
-        CreateMap<ProductDbModel, Product>();
+        CreateMap<ProductDbModel, Product>()
+            .ConstructUsing(src => new Product(src.Name, src.Price));
         CreateMap<Product, ProductDbModel>();
     }
 
     public void CreateProvidedProductMapping()
     {
-        CreateMap<ProvidedProductDbModel, ProvidedProduct>();
+        CreateMap<ProvidedProductDbModel, ProvidedProduct>()
+            .ConstructUsing(src => new ProvidedProduct(src.ProductId, src.ProductQuantity));
         CreateMap<ProvidedProduct, ProvidedProductDbModel>();
     }
 
     public void CreateSalesPointMapping()
     {
-        CreateMap<SalesPointDbModel, SalesPoint>();
+        CreateMap<SalesPointDbModel, SalesPoint>()
+            .ConstructUsing(src => new SalesPoint(src.Name))
+            .AfterMap((src, sp) =>
+            {
+                foreach (var pp in src.ProvidedProducts)
+                {
+                    var providedProduct = new ProvidedProduct(pp.ProductId, pp.ProductQuantity);
+                    sp.AddProvidedProduct(providedProduct);
+                }
+            });
         CreateMap<SalesPoint, SalesPointDbModel>();
     }
 
     public void CreateSaleDataMapping()
     {
-        CreateMap<SaleDataDbModel, SaleData>();
+        CreateMap<SaleDataDbModel, SaleData>()
+            .ConstructUsing(src => new SaleData(src.ProductId, src.ProductQuantity))
+            .AfterMap((src, sd) => sd.SetProductIdAmountByPrice(src.ProductIdAmount));
         CreateMap<SaleData, SaleDataDbModel>();
     }
 
     public void CreateSaleMapping()
     {
-        CreateMap<SaleDbModel, Sale>();
+        CreateMap<SaleDbModel, Sale>()
+            .ConstructUsing(src => new Sale(src.SalesPointId, src.BuyerId, src.Date, src.Time))
+            .AfterMap((src, sale) => {
+                var saleData = src.SaleData.Select(sd =>
+                {
+                    var saleData = new SaleData(sd.ProductId, sd.ProductQuantity);
+                    saleData.SetProductIdAmountByPrice(sd.ProductIdAmount);
+                    return saleData;
+                }).ToList();
+                sale.AddSaleDataRange(saleData);
+            });
         CreateMap<Sale, SaleDbModel>();
     }
 }
